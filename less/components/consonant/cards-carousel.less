@@ -1,0 +1,309 @@
+@consonantCardsCarouselInnerPadding: 16;
+
+.consonant-Wrapper--carousel {
+    display: flex;
+    justify-content: center;
+
+    .consonant {
+        &-Wrapper {
+            &-inner {
+                padding: 0 unit(@consonantCardsCarouselInnerPadding, px);
+                max-width: @consonantDesktopMinWidth + unit(3*(@consonantCardsCarouselInnerPadding), px);
+                width: 83.3%;
+
+                @media @consonant-carousel-down {
+                    padding: 0;
+                    width: 100%;
+                }
+
+                @media @consonant-carousel-mobile-ceiling {
+                    padding: 0;
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+
+            &-collection {
+                min-height: 100%;
+                min-width: 100%;
+
+                &.is {
+                    &-loading {
+                        min-height: 496px;
+                    }
+                }
+            }
+        }
+
+        &-Container {
+            &--carousel {
+                min-width: 100%;
+                padding: 8px;
+                overflow-x: scroll;
+                /* stylelint-disable property-no-unknown */
+                //scrollbar-width: thin;
+                //scrollbar-color: #6d6d6d transparent;
+
+                //&::-webkit-scrollbar {
+                //    height: 4px;
+                //}
+                //
+                //&::-webkit-scrollbar-track {
+                //    background-color: #fff;
+                //    border-radius: 10px;
+                //}
+                //
+                //&::-webkit-scrollbar-thumb {
+                //    background-color: #6d6d6d;
+                //    height: 4px;
+                //    border-radius: 10px;
+                //}
+
+                @media @consonant-carousel-down {
+                    padding-left: 24px;
+                    padding-right: 0;
+                }
+
+                @media @consonant-carousel-mobile-ceiling {
+                    overflow: auto;
+                    padding-bottom: 24px;
+                    padding-left: 8px;
+                }
+            }
+        }
+
+        &-CarouselInfo {
+            display: flex;
+            padding-left: 16px;
+            justify-content: space-between;
+
+            @media screen and (min-width: 600px) and (max-width: 1199px) {
+                padding-left: 32px;
+            }
+
+            &-collectionTitle {
+                margin: 0;
+
+                .font(1.125rem, 1.375rem, 700, @consonantDarkGrey800);
+
+                &--withLightText {
+                    color: @consonantWhite;
+                }
+            }
+
+            &-results {
+                display: block;
+                margin-left: auto;
+                padding-left: 12px;
+
+                .font(0.875rem, 1.3125rem, 400, @consonantDarkGrey400, right);
+
+                strong {
+                    font-weight: 700;
+                }
+
+                &--withLightText {
+                    color: @consonantLightGrey200;
+                }
+            }
+        }
+
+        &-CardsGrid {
+            grid-auto-flow: column;
+            justify-content: flex-start;
+            padding: 8px;
+            width: 100%;
+
+            @media @consonant-carousel-mobile-ceiling {
+                width: @consonantDesktopMinWidth;
+            }
+
+            &:after {
+                display: block;
+                content: '';
+                height: 100%;
+            }
+
+            &--2up {
+                grid-template-columns: repeat(auto-fill, minmax(@consonant-DoubleWideCard-desktopMinWidth, @consonant-DoubleWideCard-desktopMinWidth));
+
+                .consonant-Card {
+                    min-width: 500px;
+                }
+
+                &:after {
+                    width: 1px;
+                }
+
+                @media @consonant-carousel-mobile-ceiling {
+                    grid-template-columns: repeat(auto-fit, clamp(@consonant-DoubleWideCard-mobileMinWidth, 90vw, @consonant-DoubleWideCard-desktopMinWidth));
+
+                    .consonant-Card {
+                        min-width: @consonant-DoubleWideCard-mobileMinWidth;
+                        width: clamp(@consonant-DoubleWideCard-mobileMinWidth, 90vw, @consonant-DoubleWideCard-desktopMinWidth);
+                    }
+
+                    &:after {
+                        // display: none;
+                        padding: 0;
+                        width: 1px;
+                    }
+                }
+            }
+
+            &--3up {
+                grid-template-columns: repeat(auto-fill, minmax(@consonantCardMaxWidth, @consonantCardMaxWidth));
+
+                .consonant-Card {
+                    min-width: @consonantCardMaxWidth;
+                }
+
+                &:after {
+                    width: 1px;
+                }
+
+                @media @consonant-carousel-mobile-ceiling {
+                    grid-template-columns: repeat(auto-fit, clamp(@consonantCardMinWidth, 90vw, @consonantCardMaxWidth));
+
+                    .consonant-Card {
+                        min-width: @consonantCardMinWidth;
+                        width: clamp(@consonantCardMinWidth, 90vw, @consonantCardMaxWidth);
+                    }
+
+                    &:after {
+                        // display: none;
+                        padding: 0;
+                        width: 1px;
+                    }
+                }
+            }
+
+            &--4up {
+                grid-template-columns: repeat(auto-fill, minmax(@consonant-CardsGrid-smallerCardMaxWidth, @consonant-CardsGrid-smallerCardMaxWidth));
+
+                .consonant-Card {
+                    min-width: @consonant-CardsGrid-smallerCardMaxWidth;
+                }
+
+                &:after {
+                    width: 1px;
+                }
+
+                @media @consonant-carousel-mobile-ceiling {
+                    grid-template-columns: repeat(auto-fit, minmax(@consonant-CardsGrid-smallerCardMaxWidth, max-content));
+
+                    // .consonant-Card {
+                    //     min-width: @consonant-CardsGrid-smallerCardMaxWidth;
+                    // }
+
+                    &:after {
+                        // display: none;
+                        padding: 0;
+                        width: 1px;
+                    }
+                }
+            }
+
+            &--5up {
+                grid-template-columns: repeat(auto-fill, minmax(@consonant-CardsGrid-smallestCardMaxWidth, @consonant-CardsGrid-smallestCardMaxWidth));
+
+                .consonant-Card {
+                    min-width: @consonant-CardsGrid-smallestCardMaxWidth;
+                }
+
+                &:after {
+                    width: 1px;
+                }
+
+                @media @consonant-carousel-mobile-ceiling {
+                    grid-template-columns: repeat(auto-fit, minmax(@consonant-CardsGrid-smallerCardMinWidth, max-content));
+
+                    .consonant-Card {
+                        min-width: @consonant-CardsGrid-smallerCardMinWidth;
+                    }
+
+                    &:after {
+                        // display: none;
+                        padding: 0;
+                        width: 1px;
+                    }
+                }
+            }
+        }
+
+        &-Navigation {
+            &--carousel {
+                display: none;
+
+                @media screen and (min-width: (599px + 1)) {
+                    display: block;
+                }
+
+                button {
+                    background: @consonantLightGrey50;
+                    border-radius: 100%;
+                    display: block;
+                    height: 34px;
+                    outline: none;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translate(50%, -50%);
+                    animation: carousel-fade-button 1s;
+                    transition: all 0.3s ease;
+                    width: 34px;
+                    z-index: 5;
+
+                    @media @consonant-carousel-down {
+                        margin-right: 36px;
+                    }
+
+                    &.consonant {
+                        &-Button {
+                            &--previous {
+                                left: 0;
+                                right: auto;
+                                transform: translate(-50%, -50%) rotate(180deg);
+                            }
+                        }
+                    }
+
+                    &:before,
+                    &:after {
+                        background-color: @consonantGray800;
+                        border-bottom-left-radius: 25% 60%;
+                        border-bottom-right-radius: 25% 60%;
+                        border-top-left-radius: 25% 60%;
+                        border-top-right-radius: 25%;
+                        content: '';
+                        display: block;
+                        height: 3px;
+                        left: 17px;
+                        position: absolute;
+                        top: 14px;
+                        transform-origin: left center;
+                        transform: rotate(45deg) translate(-50%, -50%);
+                        width: 11px;
+                        z-index: 1;
+                    }
+
+                    &:after {
+                        border-bottom-left-radius: 25% 60%;
+                        border-bottom-right-radius: 25%;
+                        border-top-left-radius: 25% 60%;
+                        border-top-right-radius: 25% 60%;
+                        top: 18px;
+                        transform: rotate(-45deg) translate(-50%, 50%);
+                    }
+
+                    &:hover {
+                        &:before,
+                        &:after {
+                            background-color: rgba(0, 0, 0, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

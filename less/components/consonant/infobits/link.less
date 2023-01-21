@@ -1,0 +1,30 @@
+.consonant {
+    &-LinkInfobit {
+        min-width: 0;
+        max-width: 100%;
+        max-height: 1rem * 2;
+        margin-left: 16px;
+
+        .font(0.9375rem, 1rem, 700, @consonantBlue500, left);
+        .line-clamp(2);
+
+        text-decoration: none;
+        transition: color @consonantTransitionTime @consonantTransitionFunc;
+
+        &:hover {
+            color: @consonantBlue600;
+            text-decoration: none;
+        }
+
+        &:active {
+            color: @consonantBlue700;
+            text-decoration: none;
+        }
+
+        .focused;
+    }
+}
+
+*:not(:last-of-type):nth-child(2) > .consonant-LinkInfobit:only-child {
+    margin-right: 0;
+}
