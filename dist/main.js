@@ -7924,7 +7924,7 @@ var Grid = function Grid(props) {
     var customCard = void 0;
     try {
         /* eslint-disable-next-line no-new-func */
-        customCard = new Function('card', getConfig('customCard', '')[0]);
+        customCard = new Function('card', getConfig('customCard', '')[1]);
     } catch (e) {
         customCard = function customCard() {};
     }

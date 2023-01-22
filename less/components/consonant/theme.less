@@ -209,6 +209,64 @@
         .themeDefs(@name);
 
         .consonant {
+            &-FiltersInfo {
+                &-title,
+                &-results {
+                    color: @consonantGray900;
+                }
+            }
+
+            /* consonant-LeftFilters */
+
+            &-LeftFilters {
+                border-color: @consonantGray300;
+                background-color: @consonantBaseColor;
+
+                &-deskTitle {
+                    color: inherit;
+                }
+
+                .consonant-Search {
+                    &-inputTitle {
+                        color: @consonantGray800;
+                    }
+
+                    &-input {
+                        background-color: @consonantGray100;
+                        color: @consonantGray900;
+                    }
+                }
+
+                .consonant-ChosenFilter {
+                    color: @consonantGray800;
+                }
+
+                .consonant-LeftFilter {
+                    &-link,
+                    &-itemsItemName {
+                        color: @consonantGray900;
+                    }
+
+                    &.is-opened .consonant-LeftFilter-link {
+                        color: @consonantGray800;
+                    }
+
+                    &-itemsItem:hover {
+                        background-color: @consonantGray50;
+                    }
+                }
+            }
+
+            /* consonant-Pagination */
+
+            &-Pagination {
+                &-btn,
+                &-itemBtn,
+                &-summary {
+                    color: @consonantGray900;
+                }
+            }
+
             /* consonant-ThreeFourthCard */
 
             &-ThreeFourthCard {
@@ -252,6 +310,44 @@
             /* consonant-OneHalfCard */
 
             &-OneHalfCard {
+                border-color: @consonantGray300;
+                background-color: @consonantBaseColor;
+
+                &-inner {
+                    background-color: @consonantBaseColor;
+                }
+
+                &-img {
+                    background-color: @consonantGray300;
+                }
+
+                &-label {
+                    color: @consonantGray800;
+                }
+
+                &-title {
+                    color: @consonantGray900;
+                }
+
+                &-text {
+                    color: @consonantGray700;
+                }
+
+                &-banner {
+                    color: @consonantBaseColor;
+                    background-color: @consonantBlue600;
+                }
+
+                &-badge {
+                    color: @consonantGray700;
+                    border-color: @consonantGray600;
+                    background-color: @consonantBaseColor;
+                }
+            }
+
+            /* consonant-TextCard */
+
+            &-TextCard {
                 border-color: @consonantGray300;
                 background-color: @consonantBaseColor;
 
@@ -428,7 +524,7 @@
             border-color: @consonantGray800;
             background-color: @consonantBaseColor;
 
-            span {
+            &:not(&--cta) span {
                 color: @consonantGray800;
             }
 
@@ -437,7 +533,7 @@
                 background-color: @consonantGray800;
             }
 
-            &:hover span {
+            &:hover:not(&--cta) span {
                 color: @consonantBaseColor;
             }
 
@@ -446,7 +542,7 @@
                 background-color: @consonantGray900;
             }
 
-            &:active span {
+            &:active:not(&--cta) span {
                 color: @consonantBaseColor;
             }
 
@@ -458,26 +554,14 @@
                 border-color: @consonantBlue500;
                 background-color: @consonantBlue500;
 
-                span {
-                    color: @consonantBaseColor;
-                }
-
                 &:hover {
                     border-color: @consonantBlue600;
                     background-color: @consonantBlue600;
                 }
 
-                &:hover span {
-                    color: @consonantBaseColor;
-                }
-
                 &:active {
                     border-color: @consonantBlue700;
                     background-color: @consonantBlue700;
-                }
-
-                &:active span {
-                    color: @consonantBaseColor;
                 }
             }
         }

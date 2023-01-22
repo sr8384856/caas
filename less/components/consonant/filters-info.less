@@ -15,7 +15,7 @@
         .margin-auto;
 
         box-sizing: border-box;
-        padding: 14px 0 16px;
+        padding: 0 0 16px;
         top: 0;
         left: 0;
         background-color: transparent;
@@ -45,6 +45,10 @@
             background-color: @consonantBaseColor;
             outline: 0;
             user-select: none;
+
+            &:focus {
+                border-color: @consonantFocusedColor;
+            }
 
             &Selected {
                 display: block;
@@ -89,6 +93,10 @@
             align-items: flex-start;
             width: 100%;
             padding-top: 14px;
+
+            &:first-child {
+                padding-top: 0;
+            }
         }
 
         &-title {
@@ -124,24 +132,24 @@
 
         @media @consonant-desktop-up {
             flex-wrap: nowrap;
-            align-items: flex-start;
-            min-height: @consonant-FiltersInfo-1200BreakpointHeight;
+            align-items: stretch;
             margin-left: auto;
             margin-right: auto;
-            padding: 67px 0 28px;
+            padding-bottom: 28px;
 
             &-wrapper {
                 order: -1;
-                padding: 5px 32px 5px 0;
+                padding: 0 32px 0 0;
                 flex-wrap: nowrap;
+                align-items: center;
 
                 &:after {
                     content: '';
                     position: absolute;
                     width: 1px;
-                    height: 32px;
                     background-color: @consonantLightGrey300;
                     top: 0;
+                    bottom: 0;
                     right: 16px;
                     margin: auto;
                 }
@@ -177,4 +185,11 @@
             }
         }
     }
+}
+
+/*  Add extra top space when left filter panel is enabled to keep header of the left
+    filter panel on the same level as text of .consonant-FiltersInfo-title
+*/
+div:not(:only-child) > .consonant-FiltersInfo .consonant-FiltersInfo-wrapper:only-child {
+    padding-top: 6px;
 }

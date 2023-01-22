@@ -8,7 +8,7 @@
     &-TopFilters {
         display: block;
         margin: 0 auto;
-        padding: 14px 0 16px;
+        padding-bottom: 16px;
 
         &-inner {
             display: flex;
@@ -39,7 +39,7 @@
             flex-grow: 1;
             max-width: calc(~ '100% - ' @consonant-Select-width * 0.85 ~ ' - 8px');
 
-            &:only-child {
+            &:first-child {
                 max-width: 100%;
                 justify-content: flex-start;
             }
@@ -180,6 +180,10 @@
             align-items: flex-start;
             width: 100%;
             padding-top: 16px;
+
+            &:only-child {
+                padding-top: 0;
+            }
         }
 
         &-collectionTitle {

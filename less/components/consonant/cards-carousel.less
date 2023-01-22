@@ -7,9 +7,8 @@
     .consonant {
         &-Wrapper {
             &-inner {
-                padding: 0 unit(@consonantCardsCarouselInnerPadding, px);
-                max-width: @consonantDesktopMinWidth + unit(3*(@consonantCardsCarouselInnerPadding), px);
-                width: 83.3%;
+                max-width: @consonantDesktopMinWidth;
+                width: 83.4%;
 
                 @media @consonant-carousel-down {
                     padding: 0;
@@ -38,26 +37,17 @@
         &-Container {
             &--carousel {
                 min-width: 100%;
-                padding: 8px;
+                padding: 8px 0;
                 overflow-x: scroll;
-                /* stylelint-disable property-no-unknown */
-                //scrollbar-width: thin;
-                //scrollbar-color: #6d6d6d transparent;
 
-                //&::-webkit-scrollbar {
-                //    height: 4px;
-                //}
-                //
-                //&::-webkit-scrollbar-track {
-                //    background-color: #fff;
-                //    border-radius: 10px;
-                //}
-                //
-                //&::-webkit-scrollbar-thumb {
-                //    background-color: #6d6d6d;
-                //    height: 4px;
-                //    border-radius: 10px;
-                //}
+                @media screen and (min-width: @consonantDesktopMinWidth) {
+                    overflow: -moz-scrollbars-none;
+                    -ms-overflow-style: none;
+
+                    &::-webkit-scrollbar {
+                        height: 0 !important;
+                    }
+                }
 
                 @media @consonant-carousel-down {
                     padding-left: 24px;
@@ -111,7 +101,7 @@
         &-CardsGrid {
             grid-auto-flow: column;
             justify-content: flex-start;
-            padding: 8px;
+            padding: 8px 0;
             width: 100%;
 
             @media @consonant-carousel-mobile-ceiling {
@@ -122,6 +112,7 @@
                 display: block;
                 content: '';
                 height: 100%;
+                margin-left: -16px;
             }
 
             &--2up {
@@ -144,7 +135,6 @@
                     }
 
                     &:after {
-                        // display: none;
                         padding: 0;
                         width: 1px;
                     }
@@ -152,10 +142,10 @@
             }
 
             &--3up {
-                grid-template-columns: repeat(auto-fill, minmax(@consonantCardMaxWidth, @consonantCardMaxWidth));
+                grid-template-columns: repeat(auto-fill, minmax(@consonantCardMaxWidth, @consonantCardMaxWidth-3up));
 
                 .consonant-Card {
-                    min-width: @consonantCardMaxWidth;
+                    min-width: @consonantCardMaxWidth-3up;
                 }
 
                 &:after {
@@ -171,7 +161,6 @@
                     }
 
                     &:after {
-                        // display: none;
                         padding: 0;
                         width: 1px;
                     }
@@ -192,12 +181,7 @@
                 @media @consonant-carousel-mobile-ceiling {
                     grid-template-columns: repeat(auto-fit, minmax(@consonant-CardsGrid-smallerCardMaxWidth, max-content));
 
-                    // .consonant-Card {
-                    //     min-width: @consonant-CardsGrid-smallerCardMaxWidth;
-                    // }
-
                     &:after {
-                        // display: none;
                         padding: 0;
                         width: 1px;
                     }
@@ -223,10 +207,15 @@
                     }
 
                     &:after {
-                        // display: none;
                         padding: 0;
                         width: 1px;
                     }
+                }
+            }
+
+            &--with4xGutter {
+                @media screen and (max-width: @consonant599PxWidth) {
+                    padding-left: @consonant-CardsGrid-gutterSize;
                 }
             }
         }
