@@ -92,7 +92,7 @@ const Grid = (props) => {
     let customCard;
     try {
         /* eslint-disable-next-line no-new-func */
-        customCard = new Function('card', getConfig('customCard', '')[0]);
+        customCard = new Function('card', getConfig('customCard', '')[1]);
     } catch (e) {
         customCard = () => {};
     }

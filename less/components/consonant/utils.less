@@ -84,6 +84,32 @@
     }
 }
 
+.focus-shadow-round {
+    position: relative;
+
+    &:focus {
+        &:after {
+            border-radius: 18px;
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: -2px;
+            transition: box-shadow 0.13s ease-out, margin 0.13s ease-out;
+            box-shadow: 0 0 0 2px @consonantFocusedColor;
+        }
+    }
+}
+
+.focus-underline {
+    &:focus {
+        box-shadow: 0 2px 0 0 @consonantFocusedColor;
+    }
+}
+
 .card-hover {
     &:hover {
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -186,10 +212,6 @@
         transition: transform @consonantTransitionTime @consonantTransitionFunc;
         outline: 2px solid @consonantFocusedColor;
     }
-}
-
-.scale {
-    transform: scale(1.01);
 }
 
 .hide {

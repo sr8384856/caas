@@ -69,6 +69,11 @@
             background-color: transparent;
             outline: 0;
             cursor: pointer;
+            border: 1px solid transparent;
+
+            &:focus {
+                border-color: @consonantFocusedColor;
+            }
         }
 
         &-selectedItemsQty {
@@ -213,6 +218,10 @@
             }
         }
 
+        input[type = checkbox]:focus + &-itemsItemCheckmark {
+            border-color: @consonantFocusedColor;
+        }
+
         &-itemsItemCheckmark {
             position: relative;
             display: block;
@@ -253,7 +262,6 @@
                 @color: @consonantDarkGrey400
             );
 
-            text-transform: capitalize;
             word-break: break-word;
             pointer-events: none;
         }
@@ -295,6 +303,8 @@
             background-color: transparent;
 
             .no-border-no-outline;
+
+            .focus-underline;
         }
 
         &-footerClearBtn + &-footerBtn {
@@ -317,6 +327,8 @@
             border-radius: 20px;
 
             .no-border-no-outline;
+
+            .focus-shadow-round;
         }
 
         /* End related to mobile footer */

@@ -51,6 +51,10 @@
                     @line-height: 1.1875rem,
                     @color: @consonantDarkGrey400
                 );
+
+                &:focus {
+                    outline: 1px solid @consonantFocusedColor;
+                }
             }
         }
 
@@ -67,6 +71,10 @@
             background: #fff url(@consonant-LeftFilters-mobBack-data) no-repeat 50% 50%;
             background-position: contain;
             outline: 0;
+
+            &:focus {
+                border-color: @consonantFocusedColor;
+            }
         }
 
         &-clearLink {
@@ -127,6 +135,8 @@
 
             .no-border-no-outline;
 
+            .focus-underline;
+
             &:first-child {
                 margin-left: auto;
             }
@@ -152,6 +162,8 @@
             border-radius: 20px;
 
             .no-border-no-outline;
+
+            .focus-shadow-round;
         }
 
         /* End related to mobile footer */
@@ -207,8 +219,7 @@
             width: @consonant-filters-1200-break-width;
             max-width: @consonant-filters-1200-break-width;
             margin-right: 32px;
-            margin-top: 123px;
-            padding: 16px;
+            padding: 8px 16px 16px;
             border-radius: 4px;
             overflow: visible;
 
@@ -227,10 +238,13 @@
 
             &-header {
                 display: flex;
-                margin-top: -6px;
                 padding: 0 0 24px;
                 border-bottom: 1px solid @consonantLightGrey200;
                 order: -3;
+
+                & + button:after {
+                    display: none;
+                }
             }
 
             &-deskTitle {

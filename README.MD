@@ -1,13 +1,13 @@
-# CaaS-UI
+# Adobe CaaS
 
-CaaS-UI is a web-based user interface for a cloud-based application. It is built on the React.js library.
+Adobe CaaS is a web-based user interface for a cloud-based application. It is built on the React.js library.
 
 ## Installation
 
-To install caas-ui, simply clone the repo from github:
+To install CaaS, simply clone from your fork of the repo:
 
 ```
-git clone https://github.com/<username>/caas-ui
+git clone https://github.com/<username>/CaaS
 ```
 
 Then run:
@@ -34,6 +34,6 @@ npm run start
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
+## Apache
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[Apache](https://choosealicense.com/licenses/apache/)

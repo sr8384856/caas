@@ -135,7 +135,9 @@
                 transform: rotate(-45deg);
             }
 
-            .focused;
+            &:focus {
+                border: 1px solid @consonantFocusedColor;
+            }
         }
 
         @media @consonant-desktop-up {
