@@ -1,4 +1,4 @@
-# Adobe CaaS 
+# Adobe CaaS
 
 Adobe CaaS is a web-based user interface for a cloud-based application. It is built on the React.js library.
 
