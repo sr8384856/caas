@@ -1,5 +1,12 @@
 
 
+## [0.1.7](https://github.com/adobecom/caas/compare/0.1.6...0.1.7) (2023-02-28)
+
+
+### Bug Fixes
+
+* **infobit/button:** ctaAction was never applied if a cta had button style "primary" ([38f4c02](https://github.com/adobecom/caas/commit/38f4c027b1b06950b994086b0ff29f9f2bc9e505))
+
 ## [0.1.6](https://github.com/adobecom/caas/compare/0.1.5...0.1.6) (2023-02-28)
 
 ## [0.1.5](https://github.com/adobecom/caas/compare/0.1.4...0.1.5) (2023-02-24)
