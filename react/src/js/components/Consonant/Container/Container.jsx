@@ -89,6 +89,7 @@ const Container = (props) => {
     const { config } = props;
     const getConfig = makeConfigGetter(config);
     const filterGroupPrefix = 'ch_';
+    const searchPrefix = 'sh_';
 
     /**
      **** Authored Configs ****
@@ -458,6 +459,7 @@ const Container = (props) => {
      */
     const handleSearchInputChange = (val) => {
         setSearchQuery(val);
+        setUrlState(searchPrefix, val);
     };
 
     /**
