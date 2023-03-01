@@ -1,5 +1,12 @@
 
 
+# [0.2.0](https://github.com/adobecom/caas/compare/0.1.7...0.2.0) (2023-03-01)
+
+
+### Features
+
+* added search queries to the url parameters ([71ec3ec](https://github.com/adobecom/caas/commit/71ec3ec45e6f99f166d8e9588e5e8e2437e3b125))
+
 ## [0.1.7](https://github.com/adobecom/caas/compare/0.1.6...0.1.7) (2023-02-28)
 
 
