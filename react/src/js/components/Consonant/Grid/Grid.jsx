@@ -194,12 +194,12 @@ const Grid = (props) => {
 
     /**
      * Determines whether ctas should be hidden on a given card
-     * @param {Object} object - object to get value
+     * @param {Object} card - object to get value
      * @param {String} style - the collection button style
      * @returns {bool} - whether a cta should be hidden
      */
-    const getHideCta = (object, style) => {
-        if (object.hideCtaId || style === 'hidden') return true;
+    const getHideCta = (card, style) => {
+        if (card.hideCtaId || style === 'hidden') return true;
         return false;
     };
 
