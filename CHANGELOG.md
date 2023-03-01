@@ -1,5 +1,12 @@
 
 
+## [0.2.2](https://github.com/adobecom/caas/compare/0.2.1...0.2.2) (2023-03-01)
+
+
+### Bug Fixes
+
+* [MWPW-127271] - Test for auto-versioning ([e4bdb58](https://github.com/adobecom/caas/commit/e4bdb58282f3195ddfebf831481434bd8ae9c636))
+
 ## [0.2.1](https://github.com/adobecom/caas/compare/0.2.0...0.2.1) (2023-03-01)
 
 # [0.2.0](https://github.com/adobecom/caas/compare/0.1.7...0.2.0) (2023-03-01)
