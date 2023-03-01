@@ -13,7 +13,7 @@ import parseHTML from 'html-react-parser';
 
 import FullCard from '../Cards/Full';
 import { cardType } from '../types/card';
-import { getByPath } from '../Helpers/general';
+import { getByPath, getHideCta } from '../Helpers/general';
 import { useConfig } from '../Helpers/hooks';
 import ThreeFourthCard from '../Cards/ThreeFourth';
 import OneHalfCard from '../Cards/OneHalf';
@@ -203,6 +203,7 @@ const Grid = (props) => {
                 const cardStyle = collectionStyleOverride || cardStyleOverride;
                 const { contentArea: { title = '' } = {}, id } = card;
                 const cardNumber = index + 1;
+                const hideCTA = getHideCta(card, collectionButtonStyle);
 
                 switch (cardStyle) {
                     case CARD_STYLES.FULL:
@@ -257,7 +258,7 @@ const Grid = (props) => {
                                 renderBorder={renderCardsBorders}
                                 {...card}
                                 renderOverlay={renderCardsOverlay}
-                                hideCTA={collectionButtonStyle === 'hidden'}
+                                hideCTA={hideCTA}
                                 onFocus={() => scrollCardIntoView(card.id)} />
                         );
                     case CARD_STYLES.TEXT:
@@ -272,7 +273,7 @@ const Grid = (props) => {
                                 locale={locale}
                                 renderBorder={renderCardsBorders}
                                 renderOverlay={renderCardsOverlay}
-                                hideCTA={collectionButtonStyle === 'hidden'}
+                                hideCTA={hideCTA}
                                 onFocus={() => scrollCardIntoView(card.id)} />
                         );
                     case CARD_STYLES.CUSTOM:
@@ -289,7 +290,7 @@ const Grid = (props) => {
                                 locale={locale}
                                 renderBorder={renderCardsBorders}
                                 renderOverlay={renderCardsOverlay}
-                                hideCTA={collectionButtonStyle === 'hidden'}
+                                hideCTA={hideCTA}
                                 onFocus={() => scrollCardIntoView(card.id)} />
                         );
                 }
