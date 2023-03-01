@@ -321,17 +321,6 @@ export const getByPath = (object, path, defaultValue) => {
 };
 
 /**
- * Determines whether ctas should be hidden on a given card
- * @param {Object} object - object to get value
- * @param {String} style - the collection button style
- * @returns {bool} - whether a cta should be hidden
- */
-export const getHideCta = (object, style) => {
-    if (object.hideCtaId || style === 'hidden') return true;
-    return false;
-};
-
-/**
  * Return sum of the selected filters
  * @param {items} array - filter items
  * @returns {number} - selected items count

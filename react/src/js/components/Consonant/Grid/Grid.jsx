@@ -13,7 +13,7 @@ import parseHTML from 'html-react-parser';
 
 import FullCard from '../Cards/Full';
 import { cardType } from '../types/card';
-import { getByPath, getHideCta } from '../Helpers/general';
+import { getByPath } from '../Helpers/general';
 import { useConfig } from '../Helpers/hooks';
 import ThreeFourthCard from '../Cards/ThreeFourth';
 import OneHalfCard from '../Cards/OneHalf';
@@ -190,6 +190,17 @@ const Grid = (props) => {
         if (!card) return;
         const element = document.getElementById(card);
         element.scrollIntoView({ block: 'nearest' });
+    };
+
+    /**
+     * Determines whether ctas should be hidden on a given card
+     * @param {Object} object - object to get value
+     * @param {String} style - the collection button style
+     * @returns {bool} - whether a cta should be hidden
+     */
+    const getHideCta = (object, style) => {
+        if (object.hideCtaId || style === 'hidden') return true;
+        return false;
     };
 
     return cardsToshow.length > 0 && (
