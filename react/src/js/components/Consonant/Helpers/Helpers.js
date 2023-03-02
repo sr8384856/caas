@@ -259,6 +259,20 @@ export const getTitleAscSort = cards => cards.sort((cardOne, cardTwo) => {
 export const getTitleDescSort = cards => getTitleAscSort(cards).reverse();
 
 /**
+ * Returns all cards sorted by date modified
+ * @param {Array} cards - All cards in the card collection
+ * @returns {Array} - All cards sorted by title
+ */
+export const getDateModifiedSort = cards => cards.sort((cardOne, cardTwo) => {
+    const cardOneModDate = getByPath(cardOne, 'modifiedDate');
+    const cardTwoModDate = getByPath(cardTwo, 'modifiedDate');
+    if (cardOneModDate && cardTwoModDate) {
+        return cardTwoModDate.localeCompare(cardOneModDate);
+    }
+    return 0;
+});
+
+/**
  * Returns all cards Featured sorted
  * This just returns the original cards returned by Chimera IO
  * Chimera IO is responsible for handling featured sort

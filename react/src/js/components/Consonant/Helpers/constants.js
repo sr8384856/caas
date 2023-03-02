@@ -67,6 +67,7 @@ export const FILTER_PANEL = {
 export const SORT_TYPES = {
     DATEASC: 'dateasc',
     DATEDESC: 'datedesc',
+    DATEMODIFIED: 'datemodified',
     EVENTSORT: 'eventsort',
     FEATURED: 'featured',
     TITLEASC: 'titleasc',
