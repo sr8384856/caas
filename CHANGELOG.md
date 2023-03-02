@@ -1,5 +1,12 @@
 
 
+# [0.3.0](https://github.com/adobecom/caas/compare/0.2.2...0.3.0) (2023-03-02)
+
+
+### Features
+
+* **top filter panel:** add ability to customize heading level for top filter panels ([45f6ae6](https://github.com/adobecom/caas/commit/45f6ae68ab877bb2ee64e8b02566d25e948cdf2e))
+
 ## [0.2.2](https://github.com/adobecom/caas/compare/0.2.1...0.2.2) (2023-03-01)
 
 
