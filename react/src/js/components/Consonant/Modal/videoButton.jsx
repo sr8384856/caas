@@ -55,6 +55,7 @@ const VideoButton = ({
             <button
                 className="consonant-HalfHeightCard-videoButton-wrapper"
                 daa-ll="play"
+                aria-label="Play"
                 onClick={handleShowModal}>
                 <div className={className} />
             </button>

@@ -4,6 +4,7 @@ import {
     highlightCard,
     getDateAscSort,
     getDateDescSort,
+    getDateModifiedSort,
     getEventSort,
     getFeaturedSort,
     getTitleAscSort,
@@ -109,6 +110,9 @@ export default class CardFilterer {
                 break;
             case SORT_TYPES.DATEDESC:
                 this.filteredCards = getDateDescSort(this.filteredCards);
+                break;
+            case SORT_TYPES.DATEMODIFIED:
+                this.filteredCards = getDateModifiedSort(this.filteredCards);
                 break;
             case SORT_TYPES.EVENTSORT: {
                 const {
