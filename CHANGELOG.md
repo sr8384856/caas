@@ -1,5 +1,20 @@
 
 
+# [0.5.0](https://github.com/adobecom/caas/compare/0.3.1...0.5.0) (2023-03-03)
+
+
+### Bug Fixes
+
+* mOves MWPW-125515 fix to new repo ([ea99f20](https://github.com/adobecom/caas/commit/ea99f20e8bd4d3c1ffe0bceb5388786e057c118e))
+
+
+### Features
+
+* couldn't name variable obj ([cb9ae14](https://github.com/adobecom/caas/commit/cb9ae14a0add72f07da98811a7197c82c60b7961))
+* **grid:** add ability to hide ctas on indiv. cards ([1df96e6](https://github.com/adobecom/caas/commit/1df96e64e351eb60237771f0bc8845b259aa1f1f))
+* moving where function was ([b6f2728](https://github.com/adobecom/caas/commit/b6f27286ac50ac05f2072654b72bf9bb74ac6164))
+* new consonant play button styles ([30d8d4c](https://github.com/adobecom/caas/commit/30d8d4c8ee12ea125ebd8053675f31ff7441c519))
+
 # [0.4.0](https://github.com/adobecom/caas/compare/0.3.1...0.4.0) (2023-03-02)
 
 
