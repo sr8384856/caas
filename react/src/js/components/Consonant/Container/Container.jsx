@@ -393,6 +393,15 @@ const Container = (props) => {
             const filterClearedState = getFilterItemClearedState(id, prevFilters);
             return filterClearedState;
         });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        clearUrlState();
+        urlParams.forEach((value, key) => {
+            const chFilter = key.toLowerCase().replace('ch_', '').replace(' ', '-');
+            if (key.indexOf(filterGroupPrefix) !== 0 || !id.includes(chFilter)) {
+                setUrlState(key, value);
+            }
+        });
     };
 
     /**
