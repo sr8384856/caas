@@ -12,8 +12,9 @@ domRegistry.register({
     consonantPageRDC,
 });
 
-alert("hi");
-
+console.log("***");
+console.log("hi 3");
+console.log("***");
 const initReact = (element) => {
     domRegistry.init(element);
 };
