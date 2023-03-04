@@ -9097,8 +9097,9 @@ domRegistry.register({
     consonantPageRDC: _ConsonantPageDOM2.default
 });
 
-alert("hi");
-
+console.log("***");
+console.log("hi 3");
+console.log("***");
 var initReact = function initReact(element) {
     domRegistry.init(element);
 };
