@@ -12,6 +12,8 @@ domRegistry.register({
     consonantPageRDC,
 });
 
+console.log("test");
+
 const initReact = (element) => {
     domRegistry.init(element);
 };
